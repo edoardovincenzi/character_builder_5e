@@ -13,7 +13,6 @@ const Skills = () => {
       const baseSkillValue = calculateSkillValue(skill);
       const formattedSkillValue =
         baseSkillValue > 0 ? `+${baseSkillValue}` : baseSkillValue.toString();
-      console.log(skill.expertise);
       const proficiency = clsx({
         'bg-white': skill.proficient,
       });

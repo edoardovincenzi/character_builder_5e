@@ -56,7 +56,7 @@ export function rollD20(modifier: number = 0): number {
 }
 
 export const getAbility = (nameAbility: AbilitiesType) => {
-  return abilities.find((ability) => (ability.name = nameAbility));
+  return abilities.find((ability) => ability.name === nameAbility);
 };
 
 export const passivePerception = () => {
