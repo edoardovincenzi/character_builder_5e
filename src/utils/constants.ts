@@ -100,7 +100,7 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-  { proficient: false, expertise: false, name: 'Acrobazia', mod: 'DES' },
+  { proficient: true, expertise: true, name: 'Acrobazia', mod: 'DES' },
   {
     proficient: false,
     expertise: false,
@@ -108,7 +108,7 @@ export const skills: Skill[] = [
     mod: 'SAG',
   },
   { proficient: false, expertise: false, name: 'Arcano', mod: 'INT' },
-  { proficient: true, expertise: true, name: 'Atletica', mod: 'FOR' },
+  { proficient: false, expertise: false, name: 'Atletica', mod: 'FOR' },
   { proficient: true, expertise: false, name: 'Inganno', mod: 'CAR' },
   { proficient: false, expertise: false, name: 'Intrattenere', mod: 'CAR' },
   { proficient: true, expertise: true, name: 'Intuizione', mod: 'SAG' },
