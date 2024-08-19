@@ -1,4 +1,10 @@
-import { AbilityMod, PROFICIENCY_BONUS, Skill, abilities } from './constants';
+import {
+  AbilitiesType,
+  AbilityMod,
+  PROFICIENCY_BONUS,
+  Skill,
+  abilities,
+} from './constants';
 
 export function getAbilityModifier(score: number): number {
   return Math.floor((score - 10) / 2);
@@ -48,3 +54,15 @@ export function rollD20(modifier: number = 0): number {
 
   return roll + modifier;
 }
+
+export const getAbility = (nameAbility: AbilitiesType) => {
+  return abilities.find((ability) => (ability.name = nameAbility));
+};
+
+export const passivePerception = () => {
+  return (
+    10 +
+    getAbilityModifier(getAbility('Saggezza')?.value ?? 0) +
+    PROFICIENCY_BONUS
+  );
+};

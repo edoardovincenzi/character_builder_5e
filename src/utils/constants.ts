@@ -46,7 +46,7 @@ export const valuesDropdown = [
 
 export const PROFICIENCY_BONUS = 3;
 
-type AbilitiesType =
+export type AbilitiesType =
   | 'Forza'
   | 'Destrezza'
   | 'Costituzione'

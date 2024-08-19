@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getAbilityModifier, rollD20 } from '../utils';
+import { getAbilityModifier, passivePerception, rollD20 } from '../utils';
 import { PROFICIENCY_BONUS, abilities } from '../utils/constants';
 
 const AbilitiesSaves = () => {
@@ -63,6 +63,23 @@ const AbilitiesSaves = () => {
       <div className="mt-4">
         <h2 className="text-2xl w-full  mb-2">Tiri salvezza</h2>
         <div className="grid grid-cols-2 gap-4">{listSaves}</div>
+      </div>
+      <div className="mt-4">
+        <h2 className="text-2xl w-full  mb-2">Sensi</h2>
+        <div className="flex gap-4">
+          <div
+            className="flex flex-col cursor-pointer items-center justify-between border border-gray-300 rounded-lg p-4 gap-2"
+            onClick={() => {
+              setResultRoll(rollD20(passivePerception()));
+              setAbility('Tiro percezione passiva');
+            }}
+          >
+            <div className="flex items-center justify-between gap-1 w-full">
+              <p className="text-gray-300">Percezione passiva</p>
+              <p className="font-bold ">{passivePerception()}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
